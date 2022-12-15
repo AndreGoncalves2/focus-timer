@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+header {
+    position: absolute;
+    top: 4rem;
+    right: 6rem;
+}
+
+.light,
+.dark {
+    border: none;
+    background: transparent;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.6rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+#timer button:hover {
+    scale: 1.1;
+    filter: saturate(5);
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+}
+
+.time {
+    max-width: 22.4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 9rem;
+}
+
+.time input {
+    font-family: 'Roboto';
+    text-align: right;
+    font-size: 9rem;
+    border: none;
+
+    width: 10.7rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons button {
+    background: transparent;
+    border: none;
+    
+}
+
+.buttons button svg {
+    width: 5rem;
+    height: 5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+#themes {
+    display: grid;
+    grid-template-areas: 'A B'
+    'C D';
+    gap: 2rem;
+}
+
+#themes button {
+    position: relative;
+
+    width: 13.7rem;
+    height: 14.4rem;
+
+    padding: 2.4rem;
+
+    border: none;
+    border-radius: 2.4rem;
+    background-color: rgb(225, 225, 230);
+}
+
+#themes input {
+    width: 10rem;
+    bottom: 1.5rem;
+    left: 2rem;
+    position: absolute;
+    margin-top: 2rem;
+    display: block;
+}
+
+#themes div {
+    position: relative;
+}
+
+#themes button svg path {
+    fill: #323238;
+}
+
+@media (min-width: 1200px) {
+
+    header {
+        top: 6rem;
+        right: 6rem;
+    }
+
+    header svg {
+        width: clamp(4rem, 0rem + 4vw, 13.2rem);
+        height: clamp(4rem, 0rem + 4vw, 13.2rem);
+    }
+
+    main {
+        flex-direction: row;
+        gap: 20rem;
+    }
+
+    #timer {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 0rem + 2vw, 7rem);
+    }
+    
+    .time input,
+    .time {
+        font-size: clamp(15rem, 1rem + 9vw, 23rem);
+    }
+    
+    .time {
+        max-width: initial;
+    }
+
+    .time input {
+        width: clamp(17rem, 1rem + 11vw, 27rem);
+    }
+
+    #timer {
+        align-items: flex-end;
+        max-width: 60.4rem;
+        gap: 1rem;
+    }
+
+    #themes button {
+        width: clamp(17rem, 0rem + 10vw, 27rem);
+        height: clamp(17rem, 0rem + 10vw, 27rem);
+    }
+
+    .buttons button svg {
+        width: clamp(8.9rem, 1rem + 5vw, 14rem);
+        height: clamp(8.9rem, 1rem + 5vw, 14rem);
+        
+    }
+
+    #themes button svg {
+        width: clamp(7rem, 0rem + 4vw, 13.2rem);
+        height: clamp(7rem, 0rem + 4vw, 13.2rem);
+    }
+    
+    #themes button:hover {
+        border: 1px #02799D solid;
+    }
+
+    #themes input {
+        width: 12rem;
+    }
+}
