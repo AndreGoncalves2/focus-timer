@@ -23,4 +23,4 @@ Principais funcionalidades:
 - Modo dark
 - Versão mobile
 
-Clique para visualizar o projeto online: <a href="https://andregoncalves2.github.io/FocusTimerThemes/">projeto</a>
+Clique para visualizar o projeto online: <a href="https://andregoncalves2.github.io/focus-timer/">projeto</a>
